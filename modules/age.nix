@@ -304,7 +304,7 @@ in {
         script = ''
           set -e
           set -o pipefail
-          export PATH="${pkgs.gnugrep}/bin:${pkgs.coreutils}/bin:@out@/sw/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+          export PATH="${pkgs.gnugrep}/bin:${pkgs.coreutils}/bin:/run/current-system/sw/bin:/usr/bin:/bin:/usr/sbin:/sbin"
           ${newGeneration}
           ${installSecrets}
           ${chownSecrets}
